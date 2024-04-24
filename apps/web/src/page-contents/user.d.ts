@@ -1,0 +1,25 @@
+type UserModelType = {
+  extraRouletteDrop?: number;
+  verificationSms?: any;
+  emailAddress?: string;
+  bannerDesktop?: string;
+  sellerQualification?: number;
+  id?: string;
+  firstname?: string;
+  lastname?: string;
+  username?: string;
+  balance: number;
+  gift: number;
+  email?: string;
+  hasFirstVisitVendor?: any;
+  password?: string;
+  verification_code: string;
+  phone?: string;
+  picture?: string;
+  signin_counts?: number;
+  signup_date?: string;
+  last_signin_date: string;
+  createdAt?: string;
+  updatedAt?: string;
+  token?: string;
+};

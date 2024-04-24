@@ -1,0 +1,19 @@
+.venium-wrap-label {
+  display: grid;
+  gap: 10px;
+  height: fit-content;
+
+  & > .label {
+    font-size: 14px;
+  }
+
+  & > .helper {
+    font-size: 12px;
+  }
+
+  &.error {
+    & > .helper {
+      color: var(--color-negative);
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.language-select-container {
+  max-width: 350px;
+  max-height: calc(100vh - 200px);
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+  padding: 10px 0px;
+
+  & > .content {
+    display: grid;
+    overflow: auto;
+
+    & > li {
+      display: grid;
+      grid-template-columns: min-content 1fr min-content;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px 15px;
+      gap: 15px;
+
+      & > .language {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-gray-40);
+      }
+
+      & > .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        & > .mercado-icon {
+          position: relative;
+          font-size: 20px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-color: currentColor;
+          opacity: 0.15;
+          z-index: 0;
+        }
+      }
+
+      & > .content {
+        display: grid;
+        grid-template-rows: min-content 1fr;
+        gap: 3.5px;
+
+        & > .title {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 12px;
+          font-weight: 500;
+          color: var(--color-gray-30);
+        }
+
+        & > .description {
+          font-size: 11px;
+          color: var(--color-gray-60);
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          display: -webkit-box;
+        }
+      }
+
+      & > .status {
+        margin-right: 0px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+
+        &.active {
+          background-color: var(--color-primary);
+        }
+      }
+
+      &:hover:not(.not-have-content) {
+        background-color: var(--color-gray-100);
+      }
+    }
+  }
+
+  & > .view {
+    border-top: 1px solid #3a3d47;
+    padding: 0 15px;
+    padding-top: 12.5px;
+
+    & > .content {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #f78a0e;
+      cursor: pointer;
+    }
+  }
+
+  @include md {
+    width: 100vw;
+    min-width: 100%;
+    padding: 0px 0px;
+
+    gap: 0px;
+
+    & > .header {
+      background-color: var(--color-gray-130);
+      display: flex;
+      justify-content: space-between;
+      padding: 17.5px 21px;
+      align-items: center;
+
+      & > .left-direction {
+        display: flex;
+        align-items: center;
+        gap: 21px;
+
+        & > .mercado-icon {
+          color: var(--color-gray-60);
+          font-size: 14px;
+          display: block;
+        }
+      }
+
+      & > .success {
+        color: var(--color-gray-60);
+        font-size: 20px;
+        display: block;
+      }
+    }
+
+    & > .content {
+      padding: 12.5px 16px;
+      display: grid;
+      gap: 23.75px;
+      background-color: var(--color-gray-110);
+      margin-top: 0px;
+    }
+  }
+}

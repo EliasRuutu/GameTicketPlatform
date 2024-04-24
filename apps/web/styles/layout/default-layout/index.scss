@@ -1,0 +1,86 @@
+@import '@ui-shared/styles/components/footer/index.scss';
+@import './header/index.scss';
+
+.venium-default-layout {
+  display: grid;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-rows: min-content 1fr min-content;
+
+  @include lg {
+    padding: 0px;
+  }
+
+  & > .content {
+    max-width: 1220px;
+    width: 100%;
+    margin: auto;
+
+    & > section > .page-title {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 44px;
+
+      @include md {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    &.full {
+      max-width: unset;
+      padding: 0;
+      margin: 0%;
+    }
+  }
+
+  & > header.venium-default-layout-header {
+    @extend %default-layout-header;
+  }
+
+  & > footer.venium-default-layout-footer {
+    @extend %default-layout-footer;
+
+    @include xs {
+      margin-top: 0px;
+    }
+  }
+
+  & > footer.venium-default-layout-footer {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  & > header.venium-default-layout-header {
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-between;
+    gap: 60px;
+
+    @include lg {
+      gap: 25px;
+    }
+  }
+
+  &.full {
+    max-width: unset;
+    padding: 0;
+
+    & > .content {
+      padding: 0;
+    }
+  }
+
+  @import './checkout-header/index.scss';
+  @import './comming-soon-header/index.scss';
+}
+
+@include sm {
+  .venium-default-layout-header {
+    border-bottom: 1px solid #16171d;
+  }
+}

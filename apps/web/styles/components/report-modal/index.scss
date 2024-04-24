@@ -1,0 +1,8 @@
+.report-modal {
+  display: grid;
+  gap: 25px;
+
+  & > .venium-button {
+    margin-top: 5px;
+  }
+}

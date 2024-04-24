@@ -1,0 +1,97 @@
+.venium-product-card {
+  width: 206.75px;
+  display: grid;
+  gap: 15px;
+  grid-template-rows: min-content 1fr;
+  position: relative;
+  background: var(--color-gray-120);
+  border: solid 2px var(--color-gray-120);
+  border-radius: 5px;
+  cursor: pointer;
+
+  a {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+  }
+
+  .card-action {
+    cursor: pointer;
+  }
+
+  .product-img {
+    position: relative;
+
+    .game-logo {
+      width: 30px;
+      height: 30px;
+      background: no-repeat center/cover;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      border-radius: 5px;
+      z-index: 1;
+
+      @include md {
+        width: 24px;
+        height: 24px;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    span {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      transition: 0.4s, background-position 2s;
+      width: 100% !important;
+      cursor: pointer;
+
+      .hover-1:hover {
+        --p: 100%;
+        background-position: right;
+      }
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(222.04deg, rgba(0, 0, 0, 0.4) 0%, rgba(36, 35, 35, 0.005) 35.02%);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    :hover {
+      .portfolio-overlay {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    line-height: 17.07px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  @include md {
+    width: 130px;
+  }
+}
+
+@include lg_up {
+  .venium-product-card:hover {
+    background: var(--color-gray-110);
+    border: solid 2px var(--color-gray-100);
+  }
+}
