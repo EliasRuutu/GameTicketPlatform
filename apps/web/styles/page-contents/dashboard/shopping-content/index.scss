@@ -16,7 +16,7 @@ section.shopping-content {
     }
   }
 
-  & > .shopping-info {
+  &>.shopping-info {
     display: grid;
     grid-auto-flow: column;
     gap: 40px;
@@ -24,12 +24,12 @@ section.shopping-content {
     @import './widgets/shopping-card/index.scss';
   }
 
-  & > .content {
+  &>.content {
     display: grid;
     gap: 40px;
 
-    & > button {
-      & > .content {
+    &>button {
+      &>.content {
         padding: 15px 20px;
         font-style: normal;
         font-weight: 500;
@@ -39,12 +39,12 @@ section.shopping-content {
       }
     }
 
-    & > .header {
+    &>.header {
       display: grid;
       grid-auto-flow: column;
       justify-content: space-between;
 
-      & > .action-menu {
+      &>.action-menu {
         display: grid;
         gap: 20px;
         grid-auto-flow: column;
@@ -54,13 +54,13 @@ section.shopping-content {
         grid-auto-flow: initial;
         justify-content: initial;
 
-        & > .action-menu {
+        &>.action-menu {
           justify-content: flex-end;
         }
       }
     }
 
-    & > .table-container {
+    &>.table-container {
       padding: 20px 30px;
       border-radius: 8px;
       border: 1px solid var(--color-gray-100);
@@ -78,7 +78,7 @@ section.shopping-content {
 
         tbody {
           tr {
-            & > .product-name {
+            &>.product-name {
               cursor: pointer;
             }
 
@@ -87,18 +87,18 @@ section.shopping-content {
                 padding-left: 30px;
               }
 
-              & > .product-picture {
+              &>.product-picture {
                 background: no-repeat center/cover;
                 width: 40px;
                 height: 51.11px;
                 cursor: pointer;
               }
 
-              & > .action-menu {
+              &>.action-menu {
                 cursor: pointer;
               }
 
-              & > .has-message {
+              &>.has-message {
                 width: 10px;
                 height: 10px;
                 background-color: var(--color-primary);
@@ -110,7 +110,7 @@ section.shopping-content {
       }
     }
 
-    & > .mobile-filter {
+    &>.mobile-filter {
       position: fixed;
       inset: 0;
       display: flex;
@@ -126,7 +126,7 @@ section.shopping-content {
       left: 0%;
       background-color: var(--color-gray-130);
 
-      & > .content {
+      &>.content {
         width: 300px;
         background-color: var(--color-gray-120);
         overflow: scroll;
@@ -134,7 +134,7 @@ section.shopping-content {
         box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
 
-        & > .action {
+        &>.action {
           display: flex;
           justify-content: flex-end;
           padding-bottom: 20px;
@@ -142,22 +142,22 @@ section.shopping-content {
         }
 
         .mercado-expansion {
-          & > .title {
+          &>.title {
             display: none;
           }
 
-          & > .header {
+          &>.header {
             .expansion-header {
               display: grid;
               gap: 4px;
               padding: 9px 16px;
 
-              & > .label {
+              &>.label {
                 font-size: 13px;
                 font-weight: 500;
               }
 
-              & > .message {
+              &>.message {
                 font-size: 11px;
                 color: var(--color-primary);
               }
@@ -172,25 +172,25 @@ section.shopping-content {
         .filter-group-container {
           font-size: 14px;
 
-          & > li {
+          &>li {
             padding: 10px 16px;
             border-bottom: 1px solid var(--color-gray-100);
           }
         }
       }
 
-      & > .content::-webkit-scrollbar {
+      &>.content::-webkit-scrollbar {
         display: none;
       }
 
       @include xxs {
-        & > .content {
+        &>.content {
           width: 260px;
         }
       }
     }
 
-    & > .order-list {
+    &>.order-list {
       @import './widgets/order-detail-card/index.scss';
     }
   }
@@ -198,42 +198,42 @@ section.shopping-content {
   @include md {
     gap: 30px;
 
-    & > .title {
+    &>.title {
       grid-template-columns: unset;
       grid-auto-flow: row;
       gap: 0px;
     }
 
-    & > .shopping-info {
+    &>.shopping-info {
       grid-auto-flow: unset;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
 
-      & > .shopping-card {
+      &>.shopping-card {
         &:first-of-type {
           grid-column: 1 / span 2;
         }
       }
     }
 
-    & > .content {
+    &>.content {
       margin-top: 44px;
 
-      & > .header {
+      &>.header {
         justify-content: normal;
 
-        & > .venium-wrap-label {
+        &>.venium-wrap-label {
           width: 100%;
 
-          & > .wrap-label-content {
-            & > div {
+          &>.wrap-label-content {
+            &>div {
               width: 100%;
               min-width: 100% !important;
             }
           }
         }
 
-        & > .action-menu {
+        &>.action-menu {
           display: none;
         }
       }
@@ -241,20 +241,20 @@ section.shopping-content {
   }
 
   @include xxs {
-    & > .shopping-info {
-      & > .shopping-card {
+    &>.shopping-info {
+      &>.shopping-card {
         padding: 15px;
         gap: 10px;
 
-        & > .value {
+        &>.value {
           font-size: 36px;
         }
       }
     }
 
-    & > .content {
-      & > button {
-        & > .content {
+    &>.content {
+      &>button {
+        &>.content {
           padding: 10px 30px;
         }
       }

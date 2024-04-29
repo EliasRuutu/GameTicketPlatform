@@ -14,8 +14,22 @@ import 'react-multi-carousel/lib/styles.css';
 import '../styles/index.scss';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+// import mylib from "./js/fbevents.js";
 
 export const MercadoGamer: React.FC<AppProps> = ({ Component, pageProps }) => {
+
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src =  `${mylib}`;
+  //   script.async = false;
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
+
   const router = useRouter();
 
   const getRelTag = () => {
@@ -52,7 +66,7 @@ export const MercadoGamer: React.FC<AppProps> = ({ Component, pageProps }) => {
         }}
       ></Script>
       {/* Facebook pixel */}
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -63,12 +77,11 @@ export const MercadoGamer: React.FC<AppProps> = ({ Component, pageProps }) => {
             n.queue=[];t=b.createElement(e);t.async=!0;
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window,document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '441509394228538'); 
+            fbq('init', '441509394228538');
             fbq('track', 'PageView');
             `,
         }}
-      />
+      /> */}
       <noscript>
         <img
           height="1"
@@ -113,7 +126,7 @@ export const MercadoGamer: React.FC<AppProps> = ({ Component, pageProps }) => {
               "author": {
                 "@type": "Person",
                 "name": "Santiago Maggio - Cristal"
-              }      
+              }
              }
           }
         }`,

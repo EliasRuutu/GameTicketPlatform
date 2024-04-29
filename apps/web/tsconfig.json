@@ -20,6 +20,6 @@
     "**/*.jsx",
     "next-env.d.ts",
     "../../libs/**/*.d.ts"
-, "../../next-sitemap.config.js", "../../next-sitemap.js"  ],
+, "../../next-sitemap.config.js", "../../next-sitemap.js", "../../public/js/fbevents.js"  ],
   "exclude": ["node_modules", "jest.config.ts"]
 }

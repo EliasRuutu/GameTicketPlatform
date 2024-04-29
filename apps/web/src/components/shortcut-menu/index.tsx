@@ -37,6 +37,8 @@ export const ShortCutMenu: React.FC<Props> = (props) => {
     user?.id && loadTickets();
   }, [user?.id]);
 
+  // Not Exist
+
   const loadTickets = async (): Promise<void> => {
     try {
       const response = await httpGetAll<TicketModelType>(endpoints.ticketUrl, {

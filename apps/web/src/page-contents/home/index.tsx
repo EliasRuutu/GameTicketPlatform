@@ -63,6 +63,7 @@ export const HomeContent: React.FC = () => {
     } finally {
       dispatch({ type: HOME.SET_VALUE, payload: { loading: false } });
       setLoading(false);
+      console.log("here::", home.game_products)
     }
   };
 
